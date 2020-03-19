@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cadastra Usuário</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="../public/css/style.css" rel="stylesheet">
+    <script src="../public/js/script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Cadastra Usuário</h1>
+    </header>
+
+    <article>
+        <form>
+            <div class="form-group">
+                <label for="login">login</label>
+                <input type="text" id="login" class="form-control" placeholder="digite um nome">
+            </div>
+            <div class="form-group">
+                <label for="senha1">senha</label>
+                <input type="password" id="senha1" class="form-control" placeholder="digite uma senha">
+            </div>
+            <div class="form-group">
+                <label for="senha2">redigite a senha</label>
+                <input type="password" id="senha2" class="form-control" placeholder="digite uma senha">
+            </div>
+            <input type="button" value="cadastrar" onclick="cadastraUsuario()">
+        </form>        
+
+        <div id="alerta" class="alert alert-danger" role="alert"></div>
+
+        <p>[<a href="../index.html">VOLTA</a>]</p>
+
+    </article>
+
+    <footer>
+        <span>Desenvolvido por Antonio Paulo Serpa Antunes | <a href="https://github.com/psantunes/">github.com/psantunes</a>.</span>
+    </footer>
+
+</body>
+</html>
