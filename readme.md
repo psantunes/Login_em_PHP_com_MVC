@@ -18,16 +18,16 @@ A aplicação usa Ajax para retornar o retorno das funções de cadastramento e 
 
 ## Back-end
 
-O objetivo principal era testar o uso do PHP na programação orientada a objeto e por isto tratamos o usuário como um objeto, com os atributos login e senha. Buscou-se seguir o padrão MVC (Model-View-Controller), não sei se de forma bem sucedida, fazendo o tratamento do objeto é feito através do arquivo **model\usuario.php** e o instanciamento deste objeto nos arquivos **controller\controllerCadastro.php** e  **controller\controllerLogin.php**.
+O objetivo principal era testar o uso do PHP na programação orientada a objetos e por isto tratamos o usuário como uma classe. Buscou-se seguir o padrão MVC (Model-View-Controller), não sei se de forma bem sucedida, definindo este classe, seus atributos e funções no arquivo **model\usuario.php**. O instanciamento do objeto é feito nos arquivos **controller\controllerCadastro.php** e  **controller\controllerLogin.php**.
 
-Os dois arquivos HTML na pastas views, recebem os dados do usuário e o repassam para os arquivos em controller, que instanciam o usuário e chamam as funções correspondentes.
+Os dois arquivos HTML na pasta view recebem os dados do usuário e o repassam para os arquivos em controller, que instanciam o usuário e acionam as funções correspondentes no model, que por sua vez acessam o banco de dados.
 
-Para este exercício foram criadas apenas duas funções, uma de cadastro e outra de validação de login. Outras funções para deletar, atualizar e recuperar uma lista de usuários, completando um Crud, poderão ser desenvolvidas futuramente.
+Para este exercício foram criadas apenas duas funções, uma de cadastro e outra de validação de login. Outras funções, para deletar, atualizar e recuperar uma lista de usuários, completando um CRUD, poderão ser desenvolvidas futuramente.
 
 ## Segurança
 
-O campo login da tabela usuario do MySQL foi marcado como Unique, para evitar que mais de um login seja cadastrado com o mesmo nome. Mas não foi feito o tratamento desta mensagem de erro ao usuário, que recebe apenas uma mensagem de erro padrão, o que poderá ser feito numa próxima versão.
+O campo login da tabela usuario do MySQL foi marcado como Unique, para evitar que mais de um login de usuário seja cadastrado com o mesmo nome. Mas não foi feito o tratamento deste erro, de forma que o usuário recebe apenas uma mensagem de erro padrão. Isto poderá ser feito numa segunda versão.
 
-No cadastramento do usuário é pedido que ele digite duas vezes a senha, de forma a comparar as senhas digitadas.
+No cadastramento do usuário é pedido que ele digite duas vezes a senha, com uma função em Javascript comparando se as senhas digitadas são iguais.
 
 As senhas são salvas no banco de dados criptografadas com o hash MD5.
